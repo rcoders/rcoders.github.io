@@ -1,0 +1,181 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width"> 
+	<title>Plugins</title> 
+	
+	<style>
+		.price { font-size:12pt; margin-top:0.5em; }
+	</style>
+	
+	<script>
+	function Execute( p1 ) { prompt( null, "App.Execute("+p1 ); } 
+	
+	function Install( id, btn ) 
+	{
+		if( btn.value.indexOf("Buy")>-1 ) Execute( "BuyPlugin('" + id + "')" );
+		else Execute( "InstallPlugin('" + id + "')" );
+		if( btn.value.indexOf("Update")>-1 ) btn.value = "Reinstall";
+	}
+	function OnLoad() {
+		Execute( "UpdatePluginInfo('plugin_apkbuilder,plugin_barcodereader,plugin_spheroball,plugin_moga,plugin_imagegrid,plugin_ioiocontroller,plugin_sonysmartwatch2,plugin_ocrscanner,plugin_uiextras,plugin_bluetoothle','1.20,1.00,1.00,1.00,1.00,1.00,1.00,1.02,1.04,1.00')" );
+		Execute( "UpdateFreePluginInfo('plugin_microbit,plugin_nxt-docs,plugin_ftpclient,plugin_gifviewer,plugin_suncalc,plugin_moment,plugin_csv,plugin_xml2js,plugin_lodash,plugin_puckjs','1.0,1.01,1.70,1.0,1.0,1.0,1.0,1.0,1.0,1.0')" );
+	}
+	</script>
+</head> 
+
+<body onload="OnLoad()"> 
+
+	<table style='font-size:10pt; font-family:Arial;' height=0 cellspacing=0 cellpadding=5 border=0>
+	
+    <tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/PluginApk.png" width=100%><div class="price" id="plugin_apkbuilder_price"></div></td>     
+      <td><b>ApkBuilder</b><br>Build standard Android package files. Share your Apps with your friends or upload them to the Play Store!</td>
+	  <td><input id="plugin_apkbuilder_button" type="button" name="ApkBuilder" value="     Buy     " onclick="Install('plugin_apkbuilder',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+	
+	<tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/BluetoothLE.png" width=100%><div class="price" id="plugin_bluetoothle_price"></div></td>     
+      <td><b>BluetoothLE</b><br>Communicate with Bluetooth LE devices, detect Bluetooth beacons and measure their signal strength</td>
+	  <td><input id="plugin_bluetoothle_button" type="button" name="BluetoothLE" value="     Buy     " onclick="Install('plugin_bluetoothle',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+	
+	<tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/microbit.png" width=90%><div class="price" id="plugin_microbit_price">Free</div></td>     
+      <td><b>MicroBit</b><br>Control the BBC micro:bit with Bluetooth LE</td>
+	  <td><input id="plugin_microbit_button" type="button" name="MicroBit" value="   Install   " onclick="Install('plugin_microbit',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+	
+	<tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/puckjs.png" width=100%><div class="price" id="plugin_puckjs_price">Free</div></td>     
+      <td><b>PuckJS</b><br>Detect, Control and Program the Puck.js Bluetooth Beacon and JavaScript micro-controller</td>
+	  <td><input id="plugin_puckjs_button" type="button" name="PuckJS" value="   Install   " onclick="Install('plugin_puckjs',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+	
+	<tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/NXT.png" width=90%><div class="price" id="plugin_nxt-docs_price">Free</div></td>     
+      <td><b>NXT-Docs</b><br>Docs for Lego Mindstorms NXT control using Bluetooth</td>
+	  <td><input id="plugin_nxt-docs_button" type="button" name="NXT-Docs" value="   Install   " onclick="Install('plugin_nxt-docs',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+	
+	<tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/GifViewer.png" width=100%><div class="price" id="plugin_gifviewer_price">Free</div></td>     
+      <td><b>GifViewer</b><br>Display and control animated GIF images in your apps</td>
+	  <td><input id="plugin_gifviewer_button" type="button" name="GifViewer" value="   Install   " onclick="Install('plugin_gifviewer',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+	
+	<tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/ImageGrid.png" width=100%><div class="price" id="plugin_imagegrid_price"></div></td>     
+      <td><b>ImageGrid</b><br>High performance thumbnail grid that supports both local and remote image browsing</td>
+	  <td><input id="plugin_imagegrid_button" type="button" name="ImageGrid" value="     Buy     " onclick="Install('plugin_imagegrid',this)"></td>
+    </tr>
+    <tr height=6px></tr>
+
+    <tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/UIExtras.png" width=100%><div class="price" id="plugin_uiextras_price"></div></td>     
+      <td><b>UIExtras</b><br>A collection of UI controls and dialogs, including date & time pickers, color picker dialog and more.</td>
+	  <td><input id="plugin_uiextras_button" type="button" name="UIExtras" value="     Buy     " onclick="Install('plugin_uiextras',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+	
+    <tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/IOIO.png" width=100%><div class="price" id="plugin_ioiocontroller_price"></div></td>     
+      <td><b>IOIOController</b><br>Control IOIO interfacing boards with USB or Bluetooth from your DroidScript Apps. Lots of code samples included!</td>
+	  <td><input id="plugin_ioiocontroller_button" type="button" name="IOIOController" value="     Buy     " onclick="Install('plugin_ioiocontroller',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+
+    <tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/SonySmartWatch2.png" width=100%><div class="price" id="plugin_sonysmartwatch2_price"></div></td>     
+      <td><b>SonySmartWatch2</b><br>Create Apps for Sony SmartWatch 2 using DroidScript</td>
+	  <td><input id="plugin_sonysmartwatch2_button" type="button" name="SonySmartWatch2" value="     Buy     " onclick="Install('plugin_sonysmartwatch2',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+
+	<tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/OcrScanner.png" width=100%><div class="price" id="plugin_ocrscanner_price"></div></td>     
+      <td><b>OcrScanner</b><br>Optical character recognition from DroidScript Apps using the device's camera</td>
+	  <td><input id="plugin_ocrscanner_button" type="button" name="OcrScanner" value="     Buy     " onclick="Install('plugin_ocrscanner',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+
+    <tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/FtpClient.png" width=90%><div class="price" id="plugin_ftpclient_price">Free</div></td>     
+      <td><b>FTPClient</b><br>File Transfer Protocol client</td>
+	  <td><input id="plugin_ftpclient_button" type="button" name="FTPClient" value="   Install   " onclick="Install('plugin_ftpclient',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+	
+	<tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/GoProController.png" width=100%><div class="price" id="plugin_goprocontroller_price">Free</div></td>     
+      <td><b>GoProController</b><br>Remotely control GoPro cameras from your DroidScript Apps</td>
+	  <td><input id="plugin_goprocontroller_button" type="button" name="GoProController" value="   Install   " onclick="Install('plugin_goprocontroller',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+	
+    <tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/BarcodeReader.png" width=100%><div class="price" id="plugin_barcodereader_price"></div></td>     
+      <td><b>BarcodeReader</b><br>Read 1D and 2D barcodes, including QR Codes</td>
+	  <td><input id="plugin_barcodereader_button" type="button" name="BarcodeReader" value="     Buy     " onclick="Install('plugin_barcodereader',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+
+    <tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/SpheroBall.png" width=100%><div class="price" id="plugin_spheroball_price"></div></td>     
+      <td><b>SpheroBall</b><br>Control an Orbotix Sphero ball from your DroidScript Apps</td>
+	  <td><input id="plugin_spheroball_button" type="button" name="SpheroBall" value="     Buy     " onclick="Install('plugin_spheroball',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+
+    <tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/Moga.png" width=100%><div class="price" id="plugin_moga_price"></div></td>     
+      <td><b>Moga</b><br>Use MOGA game pads in your DroidScript Apps</td>
+	  <td><input id="plugin_moga_button" type="button" name="Moga" value="     Buy     " onclick="Install('plugin_moga',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+	
+	<tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/SunCalc.png" width=90%><div class="price" id="plugin_suncalc_price">Free</div></td>     
+      <td><b>SunCalc</b><br>Calculate sun position, sunlight phases, moon position and lunar phase for a given location and time</td>
+	  <td><input id="plugin_suncalc_button" type="button" name="SunCalc" value="   Install   " onclick="Install('plugin_suncalc',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+	
+	<tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/moment.png" width=90%><div class="price" id="plugin_suncalc_price">Free</div></td>     
+      <td><b>Moment</b><br>Parse, validate, manipulate and display dates in JavaScript</td>
+	  <td><input id="plugin_moment_button" type="button" name="Moment" value="   Install   " onclick="Install('plugin_moment',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+	
+	<tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/csv.png" width=90%><div class="price" id="plugin_csv_price">Free</div></td>   
+      <td><b>CSV</b><br>Comprehensive tool to import, export and transform comma-separated values.</td>
+	  <td><input id="plugin_csv_button" type="button" name="CSV" value="   Install   " onclick="Install('plugin_csv',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+	
+	<tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/Xml2Js.png" width=90%><div class="price" id="plugin_xml2js_price">Free</div></td>     
+      <td><b>Xml2Js</b><br>Simple XML to JavaScript object converter that supports bi-directional conversion</td>
+	  <td><input id="plugin_xml2js_button" type="button" name="Xml2Js" value="   Install   " onclick="Install('plugin_xml2js',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+	
+	<tr bgcolor=#fafafa>
+      <td align="Center"><img src="img/lodash.png" width=90%><div class="price" id="plugin_lodash_price">Free</div></td>     
+      <td><b>Lodash</b><br>Makes JavaScript easier by taking the hassle out of working with arrays, numbers, objects and strings</td>
+	  <td><input id="plugin_lodash_button" type="button" name="Lodash" value="   Install   " onclick="Install('plugin_lodash',this)"></td>
+    </tr>
+	<tr height=6px></tr>
+
+  </table>
+	
+</body>
+</html>
